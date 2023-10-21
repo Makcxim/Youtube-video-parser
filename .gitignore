@@ -1,0 +1,9 @@
+.mypy_cache/
+.venv/
+.idea/
+venv/
+
+service_file.json
+.env
+
+data/
