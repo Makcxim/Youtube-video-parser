@@ -1,8 +1,7 @@
-import sys
-from settings import settings
 import asyncio
 from pathlib import Path
 import pygsheets
+import sys
 import shlex
 
 
@@ -109,8 +108,3 @@ async def write_to_gsheet(google_sheet_id, url, date, start_row, list_id):
         wks.update_value(f"E{5 + start_row + _}", i[4])
         wks.update_value(f"F{5 + start_row + _}", i[5])
         wks.update_value(f"G{5 + start_row + _}", i[6])
-
-
-
-
-

@@ -47,6 +47,7 @@ class MainGUI(Tk):
         self.progress_label = Label(self.root, text=f"Progress: 0")
         self.progress_label.pack()
 
+        # Default values from .env
         self.sheet_id_entry.insert(0, settings.GOOGLE_SHEET_ID)
         self.list_id_entry.insert(0, settings.LIST_ID)
         self.url_entry.insert(0, settings.YT_PLAYLIST_URL)
@@ -57,6 +58,7 @@ class MainGUI(Tk):
         self.start_button.pack()
 
     async def show(self):
+        # Updating progress label
         while True:
             try:
                 self.current_length = len(open(data_folder / 'videos.txt').readlines())
